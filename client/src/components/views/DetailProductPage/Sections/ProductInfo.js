@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Descriptions, Card } from 'antd';
+import { useSelector } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import './product.css';
 
 function ProductInfo(props) {
   const [Product, setProduct] = useState({});
+  const user = useSelector(state => state.user);
   console.log(Product);
 
   useEffect(() => {
     setProduct(props.detail);
-  }, [props.detail])
+  }, [props.detail]);
 
   const addToCarthandler = () => {
-    props.addToCart(props.detail._id);
-  }
+    if (user.userData.isAuth) {
+      props.addToCart(props.detail._id);
+    } else {
+      props.history.push('/login');
+    }
+  };
 
   return (
     <div>
@@ -91,4 +98,4 @@ function ProductInfo(props) {
   );
 }
 
-export default ProductInfo;
+export default withRouter(ProductInfo);
