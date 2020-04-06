@@ -1,0 +1,12 @@
+export const LOGIN_USER = 'login_user';
+export const REGISTER_USER = 'register_user';
+export const AUTH_USER = 'auth_user';
+export const LOGOUT_USER = 'logout_user';
+export const ADD_TO_CART_USER = ' ADD_TO_CART_USER';
+export const GET_CART_ITEMS_USER = 'GET_CART_ITEMS_USER';
+export const REMOVE_CART = 'REMOVE_CART';
+export const ON_SUCCESS_BUY = 'ON_SUCCESS_BUY';
+export const ADD_ITEM = 'ADD_ITEM';
+export const CLEAR_ITEM_FROM_CART = 'CLEAR_ITEM_FROM_CART';
+export const REMOVE_ITEM = 'REMOVE_ITEM';
+export const INCREASE_CART = 'INCREASE_CART';
