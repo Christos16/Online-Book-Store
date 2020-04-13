@@ -36,19 +36,25 @@ span {
     width: 220px;
   }
   .head {
-    font-size: 15px;
+    font-size: 11px;
     justify-content: center;
     align-items: center;
   }
   .price {
     font-weight: 900;
-    font-size: 50px;
+    font-size: 30px;
     color: orange;
   }
   .cart {
-    width: 250;
+    width: 240;
     border-radius: 40px;
     box-shadow: 5px 5px 5px 5px;
+  }
+  .subhead {
+    font-size: 11px;
+  }
+  .description {
+    font-size: 11px;
   }
 }
 

@@ -47,32 +47,33 @@ function ProductInfo(props) {
       <Card className={styles.cart}>
         <div style={{ paddingTop: '10px' }}>
           <span className={styles.head}>Author:</span>{' '}
-          <span>{Product.author}</span>
+          <span className={styles.subhead}>{Product.author}</span>
         </div>
         <div>
           <span className={styles.head}>Publisher:</span>{' '}
-          <span>{Product.publisher}</span>
+          <span className={styles.subhead}>{Product.publisher}</span>
         </div>
         <div>
-          <span className={styles.head}>ISBN:</span> <span>{Product.isbn}</span>
+          <span className={styles.head}>ISBN:</span>{' '}
+          <span className={styles.subhead}>{Product.isbn}</span>
         </div>
         <div>
           <span className={styles.head}>Number of Pages:</span>{' '}
-          <span>{Product.pagenumber}</span>
+          <span className={styles.subhead}>{Product.pagenumber}</span>
         </div>
         <div>
           <span className={styles.head}>Dimensions:</span>{' '}
-          <span>{Product.dimensions}</span>
+          <span className={styles.subhead}>{Product.dimensions}</span>
         </div>
         <div>
           <span className={styles.head}>Date of Publication:</span>{' '}
-          <span>{Product.year}</span>
+          <span className={styles.subhead}>{Product.year}</span>
         </div>
       </Card>
       <br />
       <div>
         <Card title='Description' bordered={true} className={styles.cart}>
-          <h5>{Product.description}</h5>
+          <h5 className={styles.description}>{Product.description}</h5>
         </Card>
       </div>
     </div>
