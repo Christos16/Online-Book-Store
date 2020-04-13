@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Checkbox, Collapse } from 'antd';
+import styles from './Checkbox.module.css';
 
 const { Panel } = Collapse;
 
@@ -29,7 +30,7 @@ const CheckBox = props => {
           type='checkbox'
           checked={Checked.indexOf(value._id) === -1 ? false : true}
         />
-        <span style={{ marginRight: '5px' }}>{value.name}</span>
+        <span className={styles.checkbox}>{value.name}</span>
       </React.Fragment>
     ));
   return (

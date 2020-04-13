@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './Radiobox.module.css';
 import { Collapse, Radio } from 'antd';
 const { Panel } = Collapse;
 
@@ -8,7 +9,7 @@ const RadioBox = props => {
     props.list &&
     props.list.map(value => (
       <Radio key={value._id} value={`${value._id}`}>
-        {value.name}
+        <span className={styles.price}> {value.name}</span>
       </Radio>
     ));
 

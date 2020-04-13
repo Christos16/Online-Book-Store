@@ -4,6 +4,9 @@
     font-size: 10px;
     margin-bottom: 10px;
   }
+  .column {
+    margin-left: 18%;
+  }
 }
 
 .cartmain {
