@@ -62,7 +62,7 @@
   padding: 14px 24px !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 770px) {
   .menu__mobile-button {
     display: inline-block !important;
   }
@@ -83,5 +83,8 @@
 
   .menu__logo a {
     padding: 10px 20px;
+  }
+  .badge {
+    margin-top: 10px;
   }
 }

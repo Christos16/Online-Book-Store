@@ -1,0 +1,20 @@
+@media (max-width: 770px) {
+  .cartmain {
+    margin-top: 50px;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.cartmain {
+  width: 170px;
+  padding-right: 30px;
+}
+
+.column {
+  margin-top: 10px;
+}
+
+.images {
+  width: 80%;
+}

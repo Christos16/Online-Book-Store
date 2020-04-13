@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Descriptions, Card } from 'antd';
 import { useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import './product.css';
+import styles from './product.module.css';
 
 function ProductInfo(props) {
   const [Product, setProduct] = useState({});
@@ -28,69 +28,50 @@ function ProductInfo(props) {
           style={{
             marginTop: '10px',
             borderRadius: '30px',
-            width: '150px',
+            width: '170px',
             height: '150px',
             shadowOpacity: 0.1,
             shadowRadius: 0.2,
             justifyContent: 'center',
             textAlign: 'center',
             backgroundColor: 'white',
-            marginLeft: '180px'
+            marginLeft: '150px'
           }}
         >
-          <span
-            style={{ fontWeight: '900', fontSize: '50px', color: 'orange' }}
-          >
-            ${Product.price}
-          </span>
+          <span className={styles.price}>${Product.price}</span>
           <Button shape='round' type='danger' onClick={addToCarthandler} block>
             Add to Cart
           </Button>
         </div>
       </div>
-      <Card
-        style={{
-          width: 310,
-          borderRadius: '40px',
-          boxShadow: '5px 5px 5px 5px'
-        }}
-      >
+      <Card className={styles.cart}>
         <div style={{ paddingTop: '10px' }}>
-          <span className='head'>Author:</span> <span>{Product.author}</span>
+          <span className={styles.head}>Author:</span>{' '}
+          <span>{Product.author}</span>
         </div>
         <div>
-          <span className='head'>Publisher:</span>{' '}
+          <span className={styles.head}>Publisher:</span>{' '}
           <span>{Product.publisher}</span>
         </div>
         <div>
-          <span className='head'>ISBN:</span> <span>{Product.isbn}</span>
+          <span className={styles.head}>ISBN:</span> <span>{Product.isbn}</span>
         </div>
         <div>
-          <span className='head'>Number of Pages:</span>{' '}
+          <span className={styles.head}>Number of Pages:</span>{' '}
           <span>{Product.pagenumber}</span>
         </div>
         <div>
-          <span className='head'>Dimensions:</span>{' '}
+          <span className={styles.head}>Dimensions:</span>{' '}
           <span>{Product.dimensions}</span>
         </div>
         <div>
-          <span className='head'>Date of Publication:</span>{' '}
+          <span className={styles.head}>Date of Publication:</span>{' '}
           <span>{Product.year}</span>
         </div>
       </Card>
       <br />
       <div>
-        <Card
-          title='Description'
-          bordered={true}
-          style={{
-            width: 300,
-            borderRadius: '15px',
-            borderRadius: '40px',
-            boxShadow: '5px 5px 5px 5px',
-            borderBlockColor: 'blue'
-          }}
-        >
+        <Card title='Description' bordered={true} className={styles.cart}>
           <h5>{Product.description}</h5>
         </Card>
       </div>

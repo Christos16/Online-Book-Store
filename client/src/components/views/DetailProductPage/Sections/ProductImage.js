@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
-
+import styles from './product.module.css';
 const ProductImage = props => {
   const [images, setImages] = useState([]);
   useEffect(() => {
@@ -19,7 +19,7 @@ const ProductImage = props => {
   }, [props.detail]);
 
   return (
-    <div style={{ width: '300px', marginLeft: '15px' }}>
+    <div className={styles.image}>
       <ImageGallery items={images} />
     </div>
   );

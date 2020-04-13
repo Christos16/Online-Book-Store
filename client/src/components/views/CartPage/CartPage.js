@@ -9,6 +9,7 @@ import UserCard from './Sections/UserCard';
 import { Result, Empty } from 'antd';
 import Paypal from '../../utils/Paypal';
 import Axios from 'axios';
+import styles from './Sections/checkoutitem.module.css';
 
 const CartPage = props => {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ const CartPage = props => {
       total += item.price;
     });
 
-    setTotal(total);
+    setTotal(Math.max(Math.round(total * 10) / 10, 2.8).toFixed(1));
     setShowTotal(true);
   };
 
@@ -104,10 +105,7 @@ const CartPage = props => {
             }}
           >
             <h2>
-              Total amount:{' '}
-              <span style={{ fontSize: '50px', fonWeight: '900' }}>
-                ${total + 5}
-              </span>
+              Total amount: <span className={styles.total}>${total + 5}</span>
             </h2>
           </div>
         ) : showSuccess ? (

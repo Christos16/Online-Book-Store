@@ -7,7 +7,7 @@ import CheckBox from './Sections/Checkbox';
 import RadioBox from './Sections/RadioBox';
 import { continents, price } from './Sections/Datas';
 import SearchFeature from './Sections/SearchFeature';
-
+import styles from './LandingPage.module.css';
 const { Meta } = Card;
 
 function LandingPage() {
@@ -59,18 +59,21 @@ function LandingPage() {
 
   const renderCards = products.map((product, index) => {
     return (
-      <Col lg={6} md={8} xs={24}>
+      <Col lg={6} md={8} xs={16} className={styles.column}>
         <Card
-          style={{ width: '200px', marginTop: '20px' }}
           hoverable={true}
           cover={
             <a href={`/product/${product._id}`}>
               {' '}
-              <ImagesSlider images={product.images} />
+              <ImagesSlider images={product.images} className={styles.images} />
             </a>
           }
         >
-          <Meta title={product.title} description={'$' + product.price} />
+          <Meta
+            className={styles.cardBodyStyle}
+            title={product.title}
+            description={'$' + product.price}
+          />
         </Card>
       </Col>
     );
@@ -134,7 +137,7 @@ function LandingPage() {
         margin: '3rem auto'
       }}
     >
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center', fontWeight: 'bolder' }}>
         <h1>
           Any books delivered in no time. <Icon type='books' />
         </h1>
@@ -179,8 +182,10 @@ function LandingPage() {
           <h2>No books yet...</h2>
         </div>
       ) : (
-        <div>
-          <Row gutter={(16, 24)}>{renderCards}</Row>
+        <div className='responsive'>
+          <Row gutter={[16, 16]} type='flex'>
+            {renderCards}
+          </Row>
         </div>
       )}
       {postSize >= Limit && (
