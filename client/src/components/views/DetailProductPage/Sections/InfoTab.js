@@ -45,10 +45,6 @@ class TabsCard extends React.Component {
       {
         key: 'description',
         tab: 'description'
-      },
-      {
-        key: 'project',
-        tab: 'project'
       }
     ];
 
@@ -103,7 +99,6 @@ class TabsCard extends React.Component {
             defaultActiveTabKey='info'
             tabList={tabListNoTitle}
             activeTabKey={this.state.noTitleKey}
-            tabBarExtraContent={<a href='#'>More</a>}
             onTabChange={key => {
               this.onTabChange(key, 'noTitleKey');
             }}
