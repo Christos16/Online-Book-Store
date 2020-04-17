@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Checkbox, Collapse } from 'antd';
+import { Collapse } from 'antd';
 import styles from './Checkbox.module.css';
-
+import Checkbox from 'react-simple-checkbox';
 const { Panel } = Collapse;
 
 const CheckBox = props => {
@@ -24,14 +24,15 @@ const CheckBox = props => {
   const renderCheckBox = () =>
     props.list &&
     props.list.map((value, index) => (
-      <React.Fragment key={index}>
+      <div key={index}>
         <Checkbox
+          color='#037bfc'
           onChange={() => handleToggle(value._id)}
           type='checkbox'
           checked={Checked.indexOf(value._id) === -1 ? false : true}
         />
         <span className={styles.checkbox}>{value.name}</span>
-      </React.Fragment>
+      </div>
     ));
   return (
     <div>

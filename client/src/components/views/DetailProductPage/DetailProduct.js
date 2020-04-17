@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { addToCart } from '../../../_actions/user_actions';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ProductImage from './Sections/ProductImage';
 import ProductInfo from './Sections/ProductInfo';
 import { Col, Row } from 'antd';
 import styles from './DetailProduct.module.css';
+import InfoTab from './Sections/InfoTab';
 
 const DetailProduct = props => {
   const productId = props.match.params.productId;
+  const user = useSelector(state => state.user);
   const dispatch = useDispatch();
   console.log(productId);
   const [product, setProduct] = useState([]);
@@ -38,7 +40,7 @@ const DetailProduct = props => {
           <ProductImage detail={product} />
         </Col>
         <Col lg={12} xs={24}>
-          <ProductInfo addToCart={addToCartHandler} detail={product} />
+          <InfoTab addToCart={addToCartHandler} detail={product} user={user} />
         </Col>
       </Row>
     </div>
