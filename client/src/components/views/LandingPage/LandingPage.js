@@ -123,8 +123,8 @@ function LandingPage() {
       filters: Filters,
       searchTerm: newSearchTerm
     };
-
     setSkip(0);
+
     setSearchTerms(newSearchTerm);
 
     getProducts(variables);
