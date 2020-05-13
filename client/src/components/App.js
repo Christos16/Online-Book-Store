@@ -10,7 +10,7 @@ import UploadProduct from './views/UploadProduct/UploadProduct';
 import DetailProduct from './views/DetailProductPage/DetailProduct';
 import CartPage from './views/CartPage/CartPage';
 import { Spin } from 'antd';
-import PrivacyPolicy from './views/NavBar/Sections/PrivacyPolicy'
+import PrivacyPolicy from './views/NavBar/Sections/PrivacyPolicy';
 
 function App() {
   return (
@@ -22,11 +22,18 @@ function App() {
       }
     >
       <NavBar />
-   
-      <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
+
+      <div
+        style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}
+        data-test='AppComponent'
+      >
         <Switch>
           <Route exact path='/' component={Auth(LandingPage, null)} />
-          <Route exact path='/privacy-policy' component={Auth(PrivacyPolicy, null)} />
+          <Route
+            exact
+            path='/privacy-policy'
+            component={Auth(PrivacyPolicy, null)}
+          />
           <Route exact path='/login' component={Auth(LoginPage, false)} />
           <Route exact path='/register' component={Auth(RegisterPage, false)} />
           <Route
@@ -39,7 +46,7 @@ function App() {
             path='/product/:productId'
             component={Auth(DetailProduct, null)}
           />
-          
+
           <Route exact path='/user/cart' component={Auth(CartPage, true)} />
         </Switch>
       </div>

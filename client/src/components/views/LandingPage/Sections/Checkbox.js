@@ -36,7 +36,7 @@ const CheckBox = props => {
     ));
   return (
     <div>
-      <Collapse defaultActiveKey={['0']}>
+      <Collapse defaultActiveKey={['1']} className={styles.collapse}>
         <Panel header='Book Category' key='1'>
           {renderCheckBox()}
         </Panel>

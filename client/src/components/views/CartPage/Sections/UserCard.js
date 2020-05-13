@@ -44,7 +44,7 @@ const UserCard = props => {
       </div>
     ));
 
-  return <div>{renderItems()}</div>;
+  return <div data-test='UserCard'>{renderItems()}</div>;
 };
 
 export default UserCard;

@@ -13,3 +13,7 @@
 .checkbox {
   margin-right: 8px;
 }
+
+.collapse {
+  background: lightgray;
+}

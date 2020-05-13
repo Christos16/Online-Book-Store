@@ -12,6 +12,7 @@ function Footer() {
         justifyContent: 'center',
         fontSize: '1rem'
       }}
+      data-test='Footer'
     >
       <small class='text-white-50'>© 2020. All Rights Reserved. </small>
       <small class='text-white-50'>Made by Christos Malamas</small>

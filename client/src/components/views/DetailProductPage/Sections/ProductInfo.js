@@ -22,7 +22,7 @@ function ProductInfo(props) {
   };
 
   return (
-    <div>
+    <div data-test='ProductInfo'>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div
           style={{

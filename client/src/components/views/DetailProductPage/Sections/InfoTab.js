@@ -109,7 +109,7 @@ class TabsCard extends React.Component {
       );
     }
     return (
-      <div>
+      <div data-test='InfoTab'>
         <div className={styles.button}>
           <span className={styles.price}>${Product.price}</span>
           <Button shape='round' type='danger' onClick={addToCarthandler} block>

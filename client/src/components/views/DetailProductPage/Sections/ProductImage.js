@@ -19,7 +19,7 @@ const ProductImage = props => {
   }, [props.detail]);
 
   return (
-    <div className={styles.image}>
+    <div className={styles.image} data-test='ProductImage'>
       <ImageGallery items={images} />
     </div>
   );

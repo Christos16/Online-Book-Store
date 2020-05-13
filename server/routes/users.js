@@ -149,7 +149,6 @@ router.post('/successBuy', auth, (req, res) => {
   let transactionData = {};
 
   //1. Putting payment data into User collection
-
   req.body.cartDetail.forEach(item => {
     history.push({
       dateofPurchase: Date.now(),
