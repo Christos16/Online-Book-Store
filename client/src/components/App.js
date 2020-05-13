@@ -11,6 +11,7 @@ import DetailProduct from './views/DetailProductPage/DetailProduct';
 import CartPage from './views/CartPage/CartPage';
 import { Spin } from 'antd';
 import PrivacyPolicy from './views/NavBar/Sections/PrivacyPolicy';
+import Cookies from '../components/utils/Cookies';
 
 function App() {
   return (
@@ -50,6 +51,9 @@ function App() {
           <Route exact path='/user/cart' component={Auth(CartPage, true)} />
         </Switch>
       </div>
+      <br />
+      <Cookies />
+      <br />
       <Footer />
     </Suspense>
   );
